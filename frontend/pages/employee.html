@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employees</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Auth Script -->
+    <script src="../js/auth.js"></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-users"></i>
+
+                <div>
+                    <h2>Employee</h2>
+                    <h2>Management</h2>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="../index.html" class="nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="register.html" class="nav-item">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Employee Registration</span>
+                </a>
+
+                <a href="employee.html" class="nav-item active">
+                    <i class="fa-solid fa-list"></i>
+                    <span>Show Employees</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+                <a href="#" class="nav-item" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div></div>
+
+                <div class="topbar-right">
+
+                    <i class="fa-regular fa-bell notification"></i>
+
+                    <div class="admin">
+
+                        <div class="admin-avatar">
+                            A
+                        </div>
+
+                        <span>Admin</span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= CONTENT ================= -->
+
+            <section class="content">
+
+                <!-- PAGE HEADER -->
+
+                <div class="employees-heading">
+
+                    <div>
+                        <h1>Employees</h1>
+
+                        <p>
+                            View and manage all registered employees.
+                        </p>
+                    </div>
+
+
+                    <!-- SEARCH -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" placeholder="Search by name, ID or department..." id="searchInput">
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= TABLE CARD ================= -->
+
+                <div class="employee-table-card">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Employee ID</th>
+                                <th>Department</th>
+                                <th>Position</th>
+                                <th>Joining Date</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+                        
+                        <tbody id="employeeTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/employee.js"></script>
+
+</body>
+
+</html>
